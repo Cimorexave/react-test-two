@@ -1,0 +1,7 @@
+/* loading page styles */
+video {
+    width: 90vw;
+    height: 90vh;
+    place-self: center;
+    z-index: -5;
+}

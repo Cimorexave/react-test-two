@@ -2,11 +2,12 @@
 //React
 import React, {useState, useEffect} from 'react';
 //Styles
-import './App.css';
+import './styles/app.css';
 //Components & Routes
 // import { Loading, Home } from './routes/index';
 import Home from './routes/Home';
 import Loading from './routes/Loading';
+
 
 function App() {
   //states

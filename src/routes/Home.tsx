@@ -89,9 +89,7 @@ const Home = () => {
       <Box id="viewport" sx={{ display: "grid", placeItems: "center" }} >
         <Box>
           <Box>
-            Don't you follow us
-            <img src="" alt="" />
-            <img src="" alt="" />
+            Don't<img src="" alt="" /> you follow<img src="" alt="" /> us?
           </Box>
           <Box>
             Follow our instagram 

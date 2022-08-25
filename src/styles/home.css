@@ -54,3 +54,9 @@
     background-position: center;
     background-size: cover ;
 }
+#viewport:nth-child(5) {
+    color: rgb(33, 72, 123);
+}
+#viewport:nth-child(6) {
+    background-color: rgb(33, 72, 123);
+}

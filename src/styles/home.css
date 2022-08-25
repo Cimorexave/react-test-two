@@ -33,3 +33,24 @@
     flex-direction: column;
     gap: 1em;
 }
+.blue {
+    position: absolute;
+    width:  100%;
+    height: 70%;
+    top: 0;
+    left: 0;
+    background-color: rgb(33, 72, 123);
+    z-index: -5;
+}
+#hr {
+    width: 50%;
+    border-radius: 5px;
+    background-color: aliceblue;
+    height: 3px;
+}
+#viewport:nth-child(4) {
+    background-image: url("../assets/img\ -1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover ;
+}

@@ -64,6 +64,26 @@ const Home = () => {
           </Box>
         </Box>
       </Box>
+
+      {/* 3rd viewport */}
+      <Box id="viewport" sx={{ position: "relative" }}>
+        <div className="blue"></div>
+        <Box sx={{ display: "flex", flexDirection: "column",
+         gap: 5, alignItems: "left", marginLeft: "8em", marginTop: "8em" }} >
+          <div id="hr" />
+          <Box>
+            <Box>Blogs</Box>
+            <Box>News and Events</Box>
+          </Box>
+          {/* slider */}
+
+        </Box>
+      </Box>
+
+      {/* 4th viewport  */}
+      <Box id="viewport" >
+      
+      </Box>
       
     </div>
   )

@@ -8,6 +8,7 @@ import './styles/app.css';
 import Home from './routes/Home';
 import Loading from './routes/Loading';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Menu from './routes/Menu';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Routes>
         <Route path='/home' element={<Home />} />
         <Route path='/' element={<Loading />} />
+        <Route path='/menu' element={<Menu />} />
         </Routes>
       </Router>
     </div>

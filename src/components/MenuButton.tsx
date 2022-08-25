@@ -1,9 +1,18 @@
+import { Fab } from '@mui/material';
 import React from 'react';
-import { Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import "../styles/explorebtn.css";
 
-const MenuButton = () => {
+const MenuButton: React.FC = () => {
+    //Navigate
+    let navigate = useNavigate();
+    const handleClick = () => {
+        navigate("/menu")
+    }
   return (
-    <div>MenuButton</div>
+    <Fab id="btn" aria-label='explore' onClick={handleClick} >
+        <img src={require("../assets/menu-icon.png")} alt="menu-icon" />
+    </Fab>
   )
 }
 

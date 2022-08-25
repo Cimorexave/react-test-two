@@ -10,7 +10,7 @@ const MenuButton: React.FC = () => {
         navigate("/menu")
     }
   return (
-    <Fab id="btn" aria-label='menu' onClick={handleClick} >
+    <Fab id="menu-btn" aria-label='menu' onClick={handleClick} >
         <img src={require("../assets/menu-icon.png")} alt="menu-icon" id="menu-btn-icon" />
         <h5>Menu</h5>
     </Fab>

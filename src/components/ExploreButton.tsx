@@ -1,8 +1,14 @@
+import { Fab } from '@mui/material';
 import React from 'react';
+import "../styles/explorebtn.css";
 
 const ExploreButton: React.FC = () => {
   return (
-    <div>Explore Button</div>
+    <Fab id="btn" aria-label='explore' >
+        <h5>
+        Click To Explore
+        </h5>
+    </Fab>
   )
 }
 

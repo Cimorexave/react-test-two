@@ -2,6 +2,7 @@ import { Button } from '@mui/material';
 import React from 'react';
 import "../styles/welcome.css";
 import logoSvg from "../assets/logo-svg.svg";
+import ExploreButton from './ExploreButton';
 
 const Welcome = () => {
   return (
@@ -12,7 +13,7 @@ const Welcome = () => {
           <img src={logoSvg} alt="logo-svg" id='logo-svg'/>
           <h3>Pharmaceutical company</h3>
         </div>
-        <Button />
+        <ExploreButton />
     </div>
   )
 }

@@ -14,7 +14,7 @@ const Loading = () => {
   return (
     <div className='loading'>
         {welcoming ? <Welcome /> : "" }
-        <video src=".../public/fotage razak.mp4" controls >
+        <video src={require("../assets/footage-razak.mp4")} controls autoPlay muted loop>
             <p>Your browser doesn't support this video format...</p>
         </video>
     </div>

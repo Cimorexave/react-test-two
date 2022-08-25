@@ -11,7 +11,8 @@ const MenuButton: React.FC = () => {
     }
   return (
     <Fab id="btn" aria-label='menu' onClick={handleClick} >
-        <img src={require("../assets/menu-icon.png")} alt="menu-icon" />
+        <img src={require("../assets/menu-icon.png")} alt="menu-icon" id="menu-btn-icon" />
+        <h5>Menu</h5>
     </Fab>
   )
 }

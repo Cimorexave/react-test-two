@@ -1,8 +1,11 @@
 import React from 'react'
+import MenuButton from '../components/MenuButton'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <MenuButton />
+    </div>
   )
 }
 

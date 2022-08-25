@@ -82,7 +82,31 @@ const Home = () => {
 
       {/* 4th viewport  */}
       <Box id="viewport" >
-      
+
+      </Box>
+
+      {/* 5th viewport  */}
+      <Box id="viewport" sx={{ display: "grid", placeItems: "center" }} >
+        <Box>
+          <Box>
+            Don't you follow us
+            <img src="" alt="" />
+            <img src="" alt="" />
+          </Box>
+          <Box>
+            Follow our instagram 
+          </Box>
+        </Box>
+      </Box>
+
+      {/* 6th viewport  */}
+      <Box id="viewport" sx={{ display: "grid", placeItems: "center" }}>
+        <Box sx={{ display: "flex" }} >
+
+        </Box>
+        <Box>
+          @2021 Razak Pharmacy. All rights reserved.
+        </Box>
       </Box>
       
     </div>

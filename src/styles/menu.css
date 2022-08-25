@@ -1,0 +1,18 @@
+#logo {
+    width: 7em;
+    height: 3em;
+}
+#viewport-menu {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(33, 72, 123);
+}
+#menu-icon-svg {
+    width: 4em;
+    margin-right: 4em;
+}
+#main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%;
+}

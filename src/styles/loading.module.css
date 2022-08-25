@@ -5,3 +5,8 @@ video {
     place-self: center;
     z-index: -5;
 }
+.loading {
+    position: relative;
+    display: grid;
+    place-items: center;
+}

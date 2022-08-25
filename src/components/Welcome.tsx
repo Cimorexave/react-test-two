@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import "../styles/welcome.css";
 
 const Welcome = () => {
   return (
-    <div>Welcome</div>
+    <div className='welcome'>
+        frghjukjwlfsligslkfn
+    </div>
   )
 }
 

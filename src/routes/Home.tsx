@@ -3,13 +3,14 @@ import { Box } from '@mui/system';
 import React from 'react';
 import MenuButton from '../components/MenuButton';
 import "../styles/home.css";
+import {motion } from "framer-motion";
 
 
 const Home = () => {
   return (
-    <div className='home'>
+    <div className='home' >
       {/* 1s viwport */}
-      <Box id="viewport">
+      <motion.div  id="viewport" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         {/* Header */}
         <Box sx={{ display: "flex", width: "100%",
         height: "25%", position: "absolute", top: 0, alignItems: "center",
@@ -35,7 +36,7 @@ const Home = () => {
           <img src={require("../assets/linkedin-in.png")} alt="linkedin" id="social-media" />
           </Box>
 
-      </Box>
+      </motion.div>
 
       {/* 2nd viewport */}
       <Box id="viewport" sx={{ color: "black" }} >

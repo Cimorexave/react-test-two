@@ -1,9 +1,10 @@
-import { Button, Link } from '@mui/material';
+import { Button, IconButton, Link } from '@mui/material';
 import { Box } from '@mui/system';
 import React from 'react';
 import MenuButton from '../components/MenuButton';
 import "../styles/home.css";
 import {motion } from "framer-motion";
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 
 const Home = () => {
@@ -23,10 +24,12 @@ const Home = () => {
         </Box>
           {/* Main */}
           <Box sx={{ padding: "0 8em", display: "flex", marginTop: "15%" }}>
-            <Box id="text-box" >
+            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+            transition={{ duration: 2, delay: 2 }} style={{ width: "36rem", position: "relative", fontSize: "larger" }} >
               <h1>Razak Pharmacy</h1>
-              <h3>with more than half a century of experience</h3>
-            </Box>
+              <h3>with more than half a century of<br /> experience</h3>
+              <IconButton aria-label="more" sx={{ color: "white", border: "2px solid white", position: "absolute", right: 100, bottom: -10 }} ><KeyboardArrowRightIcon fontSize='large' /></IconButton>
+            </motion.div>
             <img src="" alt="" />
           </Box>
           {/* Footer */}

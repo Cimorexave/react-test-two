@@ -9,7 +9,7 @@ const Loading = () => {
     const [welcoming, setWelcoming] = useState<boolean>(true)
     //lifecycle management
     useEffect(() => {
-        setTimeout(() => {setWelcoming(false)}, 5000)
+        setTimeout(() => {setWelcoming(false)}, 6000)
     }, [])
 
   return (

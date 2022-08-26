@@ -11,7 +11,7 @@ const ExploreButton: React.FC = () => {
         navigate("/home")
     }
   return (
-    <motion.div drag style={{ zIndex: 10, position: "absolute", right: 15, top: -30 }} dragConstraints={{ right: 10, top: 10 }} >
+    <motion.div drag style={{ zIndex: 10, position: "absolute", right: 15, top: -30 }} dragConstraints={{ right: 10, top: 10}} >
       <Fab id="btn" aria-label='explore' onClick={handleClick} >
           <h5>
           Click To Explore

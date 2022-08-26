@@ -1,13 +1,24 @@
 import { Fab } from '@mui/material';
-import React from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../styles/explorebtn.css";
 import {motion} from "framer-motion";
+import { exitContext, welcomingContext } from '../utils/context';
 
 const ExploreButton: React.FC = () => {
+  //states
+  const {exit , setExit} = useContext(exitContext);
+  const {welcoming , setWelcoming} = useContext(welcomingContext);
+  
     //Navigate
     let navigate = useNavigate();
     const handleClick = () => {
+      if (welcoming) {
+        setExit(true) 
+        setTimeout(() =>{setWelcoming(false)}, 1500)
+        // setWelcoming(false)
+        return
+      }
         navigate("/home")
     }
   return (

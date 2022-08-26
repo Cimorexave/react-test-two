@@ -1,25 +1,26 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import ExploreButton from '../components/ExploreButton';
 import Welcome from '../components/Welcome';
 // import {Welcome} from '../components/index';
 import "../styles/loading.module.css";
+import { exitContext, welcomingContext } from '../utils/context';
+import {motion} from "framer-motion";
 
 const Loading = () => {
     //states
-    const [welcoming, setWelcoming] = useState<boolean>(true)
+    const {exit , setExit} = useContext(exitContext);
+    const {welcoming , setWelcoming} = useContext(welcomingContext);
     //lifecycle management
-    useEffect(() => {
-        setTimeout(() => {setWelcoming(false)}, 6000)
-    }, [])
 
   return (
     <div className='loading'>
         {welcoming ? <Welcome /> : "" }
-        <ExploreButton />
-        <video src={require("../assets/footage-razak.mp4")} 
+        <ExploreButton  />
+        <motion.video transition={{ duration: 2, delay: 1.5 }} animate={{ opacity: exit? 1: 0 }}
+        src={require("../assets/footage-razak.mp4")} 
         controls autoPlay muted loop >
             <p>Your browser doesn't support this video format...</p>
-        </video>
+        </motion.video>
     </div>
   )
 }

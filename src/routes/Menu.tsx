@@ -1,9 +1,14 @@
-import { Box, Button, Collapse, Fab, IconButton } from '@mui/material';
+import { Box, Button, Collapse, Fab, IconButton, Typography } from '@mui/material';
 import React, {useState} from 'react';
 import "../styles/menu.css";
 import menuIconSvg from "../assets/menu-icon.svg";
 import {motion} from "framer-motion";
 import { useNavigate } from 'react-router-dom';
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 
 const Menu = () => {
@@ -32,37 +37,29 @@ const Menu = () => {
         <Box id="main">
           {/* menu  */}
           <Box id="menu">
-            <motion.div initial={{ opacity: 0, top: 100 }} animate={{ top: 0, opacity: 1}} transition= {{ delay: 0.5, duration: 0.5 }} >
-              <Button id="menu-button" size='large' onClick={() => { setFirstSubmenu(firstSubmenu => !firstSubmenu) }} >About Us</Button>
+            <motion.div whileHover={{ opacity: 1 }} initial={{ opacity: 0, top: 100 }} animate={{ top: 0, opacity: 0.8}} transition= {{ delay: 0.5, duration: 0.5 }} >
+              <button id="menu-button" onClick={() => { setFirstSubmenu(firstSubmenu => !firstSubmenu) }} ><Typography variant="h1" fontWeight="bolder" >About Us</Typography></button>
             </motion.div>
-            <Collapse in={firstSubmenu} >
-              <Box>Submenu 1</Box>
-              <Box>Submenu 2</Box>
-              <Box>Submenu 3</Box>
+            <Collapse in={firstSubmenu} id="collapse" >
+              <Typography variant='h3' fontWeight="bold">Submenu</Typography>
             </Collapse>
-            <motion.div initial={{ opacity: 0, top: 10 }} animate={{ top: 0, opacity: 1}} transition= {{ delay: 1, duration: 0.5 }}>
-              <Button id="menu-button" onClick={() => { setSecondSubmenu(secondSubmenu => !secondSubmenu) }} >Product</Button>
+            <motion.div whileHover={{ opacity: 1 }} initial={{ opacity: 0, top: 10 }} animate={{ top: 0, opacity: 0.8}} transition= {{ delay: 1, duration: 0.5 }}>
+              <button id="menu-button" onClick={() => { setSecondSubmenu(secondSubmenu => !secondSubmenu) }} ><Typography variant="h1" fontWeight="bolder" >Product</Typography></button>
             </motion.div>
-            <Collapse in={secondSubmenu} >
-              <Box>Submenu 1</Box>
-              <Box>Submenu 2</Box>
-              <Box>Submenu 3</Box>
+            <Collapse in={secondSubmenu} id="collapse" >
+              <Typography variant='h3' fontWeight="bold">Submenu</Typography>
             </Collapse>
-            <motion.div initial={{ opacity: 0, top: 100 }} animate={{ top: 0, opacity: 1}} transition= {{ delay: 1.5, duration: 0.5 }}>
-              <Button id="menu-button" onClick={() => { setThirdSubmenu(thirdSubmenu => !thirdSubmenu) }} >News and Events</Button>
+            <motion.div whileHover={{ opacity: 1 }} initial={{ opacity: 0, top: 100 }} animate={{ top: 0, opacity: 0.8}} transition= {{ delay: 1.5, duration: 0.5 }}>
+              <button id="menu-button" onClick={() => { setThirdSubmenu(thirdSubmenu => !thirdSubmenu) }} ><Typography variant="h1" fontWeight="bolder" >News & Events</Typography></button>
             </motion.div>
-            <Collapse in={thirdSubmenu} >
-              <Box>Submenu 1</Box>
-              <Box>Submenu 2</Box>
-              <Box>Submenu 3</Box>
+            <Collapse in={thirdSubmenu} id="collapse" >
+              <Typography variant='h3' fontWeight="bold">Submenu</Typography>
             </Collapse>
-            <motion.div initial={{ opacity: 0, top: 100 }} animate={{ top: 0, opacity: 1}} transition= {{ delay: 2, duration: 0.5 }}>
-              <Button id="menu-button" onClick={() => { setFourthSubmenu(fourthSubmenu => !fourthSubmenu) }} >Contact Us</Button>
+            <motion.div whileHover={{ opacity: 1 }} initial={{ opacity: 0, top: 100 }} animate={{ top: 0, opacity: 0.8}} transition= {{ delay: 2, duration: 0.5 }}>
+              <button id="menu-button" onClick={() => { setFourthSubmenu(fourthSubmenu => !fourthSubmenu) }} ><Typography variant="h1" fontWeight="bolder" >Contact Us</Typography></button>
             </motion.div>
-            <Collapse in={fourthSubmenu} >
-              <Box>Submenu 1</Box>
-              <Box>Submenu 2</Box>
-              <Box>Submenu 3</Box>
+            <Collapse in={fourthSubmenu} id="collapse" >
+              <Typography variant='h3' fontWeight="bold">Submenu</Typography>
             </Collapse>
           </Box>
           {/* image  */}
@@ -71,9 +68,9 @@ const Menu = () => {
           </Box>
         </Box>
           {/* Footer */}
-          <Box sx={{ marginTop: "2em", marginLeft: "2em" }}>
+          <Typography variant="subtitle2" sx={{ marginTop: "2em", marginLeft: "5em", color: "white" }}>
             Sharing is Caring
-          </Box>
+          </Typography>
 
     </motion.div>
   )

@@ -21,13 +21,23 @@
 #main {
     display: flex;
     justify-content: space-between;
-    margin-top: 10%;
+    margin-top: 9%;
 }
 #menu {
     padding-left: 4em;
+    color: rgb(85, 154, 245);
 }
 #menu-button {
-    width: 36rem;
+    width: max-content;
     height: 5rem;
     padding: 0;
+}
+button {
+    background-color: transparent; 
+    border: none;
+    cursor:pointer;
+    color: rgb(85, 154, 245);
+}
+#collapse {
+    margin-left: 10rem;
 }

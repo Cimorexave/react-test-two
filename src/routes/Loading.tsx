@@ -18,9 +18,9 @@ const Loading = () => {
         {welcoming ? <Welcome /> : "" }
         <ExploreButton  />
         <motion.video transition={{ duration: 2, delay: 1.5 }} 
-        animate={{ opacity: exit? 1: 0 }}
+        animate={{ opacity: exit? 1: 0.4 }}
         src={require("../assets/footage-razak.mp4")} 
-        controls autoPlay muted loop >
+         autoPlay muted loop >
             <p>Your browser doesn't support this video format...</p>
         </motion.video>
     </div>

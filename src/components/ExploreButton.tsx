@@ -5,7 +5,7 @@ import "../styles/explorebtn.css";
 import {motion} from "framer-motion";
 import { exitContext, welcomingContext } from '../utils/context';
 
-const ExploreButton: React.FC = () => {
+const ExploreButton: React.FC = (props: any) => {
   //states
   const {exit , setExit} = useContext(exitContext);
   const {welcoming , setWelcoming} = useContext(welcomingContext);
@@ -19,7 +19,7 @@ const ExploreButton: React.FC = () => {
         // setWelcoming(false)
         return
       }
-        navigate("/home")
+      setTimeout(() => {navigate("/home")}, 1000)
     }
   return (
     <motion.div drag style={{ zIndex: 10, position: "absolute", right: 15, top: -30 }} dragConstraints={{ right: 10, top: 10}} >

@@ -8,6 +8,7 @@ import {motion} from "framer-motion";
 
 const Loading = () => {
     //states
+    //context
     const {exit , setExit} = useContext(exitContext);
     const {welcoming , setWelcoming} = useContext(welcomingContext);
     //lifecycle management
@@ -16,7 +17,8 @@ const Loading = () => {
     <div className='loading'>
         {welcoming ? <Welcome /> : "" }
         <ExploreButton  />
-        <motion.video transition={{ duration: 2, delay: 1.5 }} animate={{ opacity: exit? 1: 0 }}
+        <motion.video transition={{ duration: 2, delay: 1.5 }} 
+        animate={{ opacity: exit? 1: 0 }}
         src={require("../assets/footage-razak.mp4")} 
         controls autoPlay muted loop >
             <p>Your browser doesn't support this video format...</p>

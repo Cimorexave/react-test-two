@@ -1,4 +1,4 @@
-import { Button, IconButton } from '@mui/material';
+import { Button, IconButton, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import React, { useRef } from 'react';
 import MenuButton from '../components/MenuButton';
@@ -6,6 +6,12 @@ import "../styles/home.css";
 import {motion } from "framer-motion";
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import "../styles/newhome.css";
+
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+
 
 const NewHome = () => {
     //refs
@@ -19,24 +25,24 @@ const NewHome = () => {
             <img id="logo" src={require("../assets/white-logo.png")} alt="logo" style={{ marginLeft: "4em" }} />
             <div style={{ marginRight: "4em", display: "flex", alignItems: "center",
             gap: "2em" }}>
-                <h3>English</h3>
-                <MenuButton />
+                <Typography variant='subtitle1' >English</Typography>
+                <motion.div  whileTap={{ scale: 0.8 }} whileHover={{ scale:1.1 }}><MenuButton /></motion.div>
             </div>
         </div>
           {/* Main */}
-          <Box sx={{ padding: "0 8em", display: "flex", marginTop: "7%" }}>
+          <Box sx={{ padding: "0 8em", display: "flex", marginTop: "3%" }}>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 2 }} style={{ width: "36rem", position: "relative", fontSize: "larger" }} >
-              <h1>Razak Pharmacy</h1>
-              <h3>with more than half a century of<br /> experience</h3>
-              <IconButton aria-label="more" sx={{ color: "white", border: "2px solid white", position: "absolute", right: 100, bottom: -10 }} ><KeyboardArrowRightIcon fontSize='large' /></IconButton>
+              <Typography variant='h2' fontWeight="bold" >Razak<br /> Pharmacy</Typography>
+              <Typography variant="body1" >with more than half a century of<br /> experience</Typography>
+              <motion.div whileHover={{  opacity: 0.6 }} ><IconButton aria-label="more" sx={{ color: "white", border: "2px solid white", position: "absolute", right: 200, bottom: -10 }} ><KeyboardArrowRightIcon fontSize='large' /></IconButton></motion.div>
             </motion.div>
           </Box>
           {/* Footer */}
           <Box sx={{ padding: "0 8em", display: "flex", marginTop: "5%", gap: 1 }} >
-          <img src={require("../assets/whatsapp.png")} alt="whatsapp" id="social-media" />
-          <img src={require("../assets/instagram.png")} alt="instagram" id="social-media" />
-          <img src={require("../assets/linkedin-in.png")} alt="linkedin" id="social-media" />
+          <motion.div whileHover={{  opacity: 0.3, cursor: "pointer" }}><img src={require("../assets/whatsapp.png")} alt="whatsapp" id="social-media" /></motion.div>
+          <motion.div whileHover={{  opacity: 0.3, cursor: "pointer" }}><img src={require("../assets/instagram.png")} alt="instagram" id="social-media" /></motion.div>
+          <motion.div whileHover={{  opacity: 0.3, cursor: "pointer" }}><img src={require("../assets/linkedin-in.png")} alt="linkedin" id="social-media" /></motion.div>
           </Box>
         </motion.div>
         {/* 2nd viewport  */}

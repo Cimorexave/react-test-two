@@ -1,6 +1,6 @@
 import { Button, IconButton } from '@mui/material';
 import { Box } from '@mui/system';
-import React from 'react';
+import React, { useRef } from 'react';
 import MenuButton from '../components/MenuButton';
 import "../styles/home.css";
 import {motion } from "framer-motion";
@@ -8,6 +8,8 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import "../styles/newhome.css";
 
 const NewHome = () => {
+    //refs
+    const carousel = useRef(null)
   return (
     <div className='parent'>
         {/* 1st viewport */}
@@ -80,7 +82,16 @@ const NewHome = () => {
                 <Box>News and Events</Box>
             </motion.div>
             {/* slider */}
-
+            <motion.div className='carousel' ref={carousel}>
+                <motion.div drag="x" dragConstraints={{ right: 100, left: -200 }} className='inner-carousel' whileDrag={{ cursor: "grabbing" }} >
+                    <motion.img whileHover={{ scale: 1.2 }} className="slider-item" src={require("../assets/img 1.png")} alt="drug-picture" />
+                    <motion.img whileHover={{ scale: 1.2 }} className="slider-item" src={require("../assets/img 2.png")} alt="drug-picture" />
+                    <motion.img whileHover={{ scale: 1.2 }} className="slider-item" src={require("../assets/img 3.png")} alt="drug-picture" />
+                    <motion.img whileHover={{ scale: 1.2 }} className="slider-item" src={require("../assets/img 4.png")} alt="drug-picture" />
+                    <motion.img whileHover={{ scale: 1.2 }} className="slider-item" src={require("../assets/img 8.png")} alt="drug-picture" />
+                    <motion.img whileHover={{ scale: 1.2 }} className="slider-item" src={require("../assets/img 9.png")} alt="drug-picture" />
+                </motion.div>
+            </motion.div>
             </Box>
         </motion.div>
         {/* 4th viewport  */}

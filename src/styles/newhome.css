@@ -66,6 +66,22 @@
 #drugs-pics {
     height: 100px;
 }
+.slider-item {
+    width: 200px;
+    height: 300px;
+    pointer-events: none;
+}
+.inner-carousel {
+    display: flex;
+    gap: 50px;
+    width: max-content;
+}
+.carousel {
+    cursor: grab;
+    overflow: hidden;
+    width: 1000rem;
+    margin-top: 3em;
+}
 #logo {
     width: 7em;
     height: 3em;

@@ -64,7 +64,8 @@
     background-color: var(--primaryblue-clr) ;
 }
 #drugs-pics {
-    height: 100px;
+    height: 150px;
+    margin-right: 0.25ch;
 }
 .slider-item {
     width: 200px;

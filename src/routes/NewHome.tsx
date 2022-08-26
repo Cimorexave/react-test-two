@@ -83,8 +83,8 @@ const NewHome = () => {
              id="hr" transition={{ duration: 0.5, delay: 0.5 }} style={{ width: 0 }} />
             <motion.div initial={{ opacity: 0, y: 10 }} transition={{ duration: 0.5, delay: 1 }}
             whileInView={{ opacity: 1, y: 0 }}>
-                <Box>Blogs</Box>
-                <Box>News and Events</Box>
+                <Typography variant="overline" >Blogs</Typography>
+                <Typography variant="h5" fontWeight="bold">News and Events</Typography>
             </motion.div>
             {/* slider */}
             <motion.div className='carousel' ref={carousel}>
@@ -108,26 +108,58 @@ const NewHome = () => {
         {/* 5th viewport  */}
         <motion.div className="viewport">
             <Box sx={{ display: "grid", placeItems: "center", height: "100%" }}>
-                <Box sx={{ fontSize: "xx-large" }}>
-                    Don't<motion.img src={require("../assets/img 7.png")} alt="drugs"
-                    initial={{ width: 0, height: 100 }} whileInView={{ width: 100 }} style={{ height: "auto" }}
-                    transition={{ delay: 1, duration: 1 }} id="drugs-pics" /> you
-                    <br/> follow<motion.img src={require("../assets/img 6.png")} alt="drugs" 
-                    initial={{ width: 0, height: 100 }} whileInView={{ width: 100 }}
-                    style={{ height: "auto" }} id="drugs-pics"
-                    transition={{ delay: 1, duration: 1 }} /> us?
+                <Box  >
+                    <Typography sx={{ textAlign: "center" }} variant="h1" fontSize="200px" fontWeight="bolder" >DON'T <motion.img src={require("../assets/img 7.png")} alt="drugs"
+                    initial={{ width: 0, height: 150 }} whileInView={{ width: 150 }} 
+                    transition={{ delay: 1, duration: 1 }} id="drugs-pics" />YOU
+                    <br/> FOLLOW <motion.img src={require("../assets/img 6.png")} alt="drugs" 
+                    initial={{ width: 0, height: 150 }} whileInView={{ width: 150 }}
+                    id="drugs-pics"
+                    transition={{ delay: 1, duration: 1 }} />US? </Typography>
                 </Box>
                 <Box sx={{ position: "absolute", bottom: 50 }}>
-                    Follow our instagram <IconButton aria-label="more" size='small' sx={{ color: "black", border: "2px solid black", position: "absolute", right: -50, bottom: -7.5 }} ><KeyboardArrowRightIcon fontSize='small' /></IconButton>
+                    <Typography variant="subtitle2" >Follow our instagram </Typography><IconButton aria-label="more" size='small' sx={{ color: "black", border: "2px solid black", position: "absolute", right: -50, bottom: -7.5 }} ><KeyboardArrowRightIcon fontSize='small' /></IconButton>
                 </Box>
             </Box>
         </motion.div>
         {/* 6th viewport  */}
         <motion.div className="viewport">
-            <Box sx={{ display: "flex" }} >
+            <Box sx={{ display: "flex", marginTop: "10em", justifyContent: "space-evenly" }} >
+                <Box>
+                    <img id="logo" src={require("../assets/white-logo.png")} alt="logo" style={{ transform: "translate(-50px, -50px)" }} />
+                    <Typography>Pharmaceutical Company</Typography>
+                </Box>
+                <Box>
+                    <Typography fontWeight="bold" fontSize="small" variant="subtitle1" sx={{ marginBottom: 10 }} >Learn</Typography>
+                    <Typography variant="h6">About Razak</Typography>
+                    <Typography variant="h6">Responsibility</Typography>
+                    <Typography variant="h6">Gallery</Typography>
+                </Box>
+                <Box>
+                    <Typography fontWeight="bold" fontSize="small" variant="subtitle1" sx={{ marginBottom: 10 }} >Explore</Typography>
+                    <Typography variant="h6">Blog Studios</Typography>
+                    <Typography variant="h6">Products</Typography>
+                </Box>
+                <Box>
+                    <Typography fontWeight="bold" fontSize="small" variant="subtitle1" sx={{ marginBottom: 10 }} >Collaborate</Typography>
+                    <Typography variant="h6">Contact</Typography>
+                    <Typography variant="h6">Become a<br/> colleague</Typography>
+                    <Typography variant="h6">Complaint</Typography>
+                </Box>
+                <Box>
+                    <Typography fontWeight="bold" fontSize="small" variant="subtitle1" sx={{ marginBottom: 10 }} >Connect</Typography>
+                    <Typography variant="h6">021-2153567</Typography>
+                    <Typography variant="h6">info@fake.com</Typography>
+                    <Box sx={{ display: "flex", alignItems: "center", gap: 1, marginTop: 5 }}>
+                        <motion.div whileHover={{  opacity: 0.3, cursor: "pointer" }}><img src={require("../assets/whatsapp.png")} alt="whatsapp" id="social-media" /></motion.div>
+                        <motion.div whileHover={{  opacity: 0.3, cursor: "pointer" }}><img src={require("../assets/instagram.png")} alt="instagram" id="social-media" /></motion.div>
+                        <motion.div whileHover={{  opacity: 0.3, cursor: "pointer" }}><img src={require("../assets/linkedin-in.png")} alt="linkedin" id="social-media" /></motion.div>
+                    </Box>
+                </Box>
+
 
             </Box>
-            <Box>
+            <Box sx={{ position: "absolute", bottom: 200 , left: 50 }}>
             @2021 Razak Pharmacy. All rights reserved.
             </Box>
         </motion.div>

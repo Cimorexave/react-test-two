@@ -3,7 +3,7 @@ video {
     width: 90vw;
     height: 90vh;
     place-self: center;
-    z-index: -5;
+    z-index: 1;
     object-fit: fill;
 }
 .loading {

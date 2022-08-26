@@ -13,7 +13,6 @@ const Welcome = () => {
           <img src={logoSvg} alt="logo-svg" id='logo-svg'/>
           <h3>Pharmaceutical company</h3>
         </div>
-        <ExploreButton />
     </div>
   )
 }

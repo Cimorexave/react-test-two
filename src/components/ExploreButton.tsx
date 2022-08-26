@@ -2,6 +2,7 @@ import { Fab } from '@mui/material';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import "../styles/explorebtn.css";
+import {motion} from "framer-motion";
 
 const ExploreButton: React.FC = () => {
     //Navigate
@@ -10,11 +11,13 @@ const ExploreButton: React.FC = () => {
         navigate("/home")
     }
   return (
-    <Fab id="btn" aria-label='explore' onClick={handleClick} >
-        <h5>
-        Click To Explore
-        </h5>
-    </Fab>
+    <motion.div drag style={{ zIndex: 10, position: "absolute", right: 15, top: -30 }} dragConstraints={{ right: 10, top: 10 }} >
+      <Fab id="btn" aria-label='explore' onClick={handleClick} >
+          <h5>
+          Click To Explore
+          </h5>
+      </Fab>
+    </motion.div>
   )
 }
 

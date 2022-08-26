@@ -17,7 +17,10 @@ const NewHome = () => {
     //refs
     const carousel = useRef(null)
   return (
-    <motion.div className='parent' exit={{ opacity: 0 }} transition={{ duration: 1 }}>
+    <motion.div className='parent'
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }} >
         {/* 1st viewport */}
         <motion.div className="viewport" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
             {/* Header */}

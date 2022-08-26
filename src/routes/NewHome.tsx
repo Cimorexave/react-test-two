@@ -43,20 +43,22 @@ const NewHome = () => {
         <Box sx={{ display: "flex", gap: "5em" }} >
           <Box id="text-box">
             <Box>About Razak</Box>
-            <Box>
+            <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}>
               With more than half a century of epxerience and best quality
-            </Box>
+            </motion.div>
             {/* footer */}
-            <Box>
-              Click and Learn more #icon
+            <Box sx={{ color: "darkblue" }}>
+              Click and Learn more <IconButton aria-label="more" sx={{ color: "black", border: "2px solid white", position: "absolute", right: 100, bottom: -10 }} ><KeyboardArrowRightIcon fontSize='large' /></IconButton>
             </Box>
           </Box>
           <Box id="text-box">
-            <Box>
+            <motion.div initial={{ opacity: 0, y: 10 }} transition={{ duration: 0.5, delay: 0.5 }}
+            whileInView={{ opacity: 1, y: 0 }}>
               Razak laboratories Pharmaceutical joint stock company started it's actvity
               in 1343 Hijri (1964 AD) under the name of Pfizer Laboratories 
               joint stock company under the ownership of Pfizer America. 
-            </Box>
+            </motion.div>
             {/* footer */}
             <Box>
               <Button >Product</Button>

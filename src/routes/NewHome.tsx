@@ -11,7 +11,7 @@ const NewHome = () => {
     //refs
     const carousel = useRef(null)
   return (
-    <div className='parent'>
+    <motion.div className='parent' exit={{ opacity: 0 }} transition={{ duration: 1 }}>
         {/* 1st viewport */}
         <motion.div className="viewport" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
             {/* Header */}
@@ -126,7 +126,7 @@ const NewHome = () => {
             @2021 Razak Pharmacy. All rights reserved.
             </Box>
         </motion.div>
-    </div>
+    </motion.div>
   )
 }
 

@@ -19,7 +19,7 @@ const ExploreButton: React.FC = (props: any) => {
         // setWelcoming(false)
         return
       }
-      setTimeout(() => {navigate("/home")}, 1000)
+      setTimeout(() => {navigate("/newhome")}, 1000)
     }
   return (
     <motion.div drag whileDrag={{ scale: 0.9 }}

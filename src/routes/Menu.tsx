@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import MenuButton from '../components/MenuButton';
 import "../styles/menu.css";
 import menuIconSvg from "../assets/menu-icon.svg";
+import {motion} from "framer-motion";
 
 
 const Menu = () => {
@@ -12,7 +13,11 @@ const Menu = () => {
   const [fourthSubmenu, setFourthSubmenu] = useState<boolean>(false)
 
   return (
-    <Box id="viewport-menu" >
+    <motion.div id="viewport-menu" 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    >
         {/* Header */}
         <Box sx={{ display: "flex", width: "100%",
         height: "20%", position: "absolute", top: 0, alignItems: "center",
@@ -60,7 +65,7 @@ const Menu = () => {
             Sharing is Caring
           </Box>
 
-    </Box>
+    </motion.div>
   )
 }
 

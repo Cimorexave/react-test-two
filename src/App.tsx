@@ -11,6 +11,7 @@ import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Menu from './routes/Menu';
 import { exitContext, welcomingContext } from './utils/context';
 import ExploreButton from './components/ExploreButton';
+import NewHome from './routes/NewHome';
 
 
 function App() {
@@ -25,7 +26,8 @@ function App() {
         <welcomingContext.Provider value={{ welcoming, setWelcoming }}>
           <exitContext.Provider value={{ exit, setExit }}>
         <Routes>
-        <Route path='/home' element={<Home />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/newhome' element={<NewHome />} />
             <Route path='/' element={<Loading />} />
             <Route path='/menu' element={<Menu />} />
             <Route path='/explorebutton' element={<ExploreButton />} />

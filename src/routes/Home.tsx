@@ -42,7 +42,7 @@ const Home = () => {
       </motion.div>
 
       {/* 2nd viewport */}
-      <Box id="viewport" sx={{ color: "black" }} >
+      <motion.div id="viewport" style={{ color: "black" }} >
         <Box sx={{ display: "flex", gap: "5em" }} >
           <Box id="text-box">
             <Box>About Razak</Box>
@@ -67,10 +67,10 @@ const Home = () => {
             </Box>
           </Box>
         </Box>
-      </Box>
+      </motion.div>
 
       {/* 3rd viewport */}
-      <Box id="viewport" sx={{ position: "relative" }}>
+      <motion.div id="viewport" style={{ position: "relative" }}>
         <div className="blue"></div>
         <Box sx={{ display: "flex", flexDirection: "column",
          gap: 5, alignItems: "left", marginLeft: "8em", marginTop: "8em" }} >
@@ -82,15 +82,15 @@ const Home = () => {
           {/* slider */}
 
         </Box>
-      </Box>
+      </motion.div>
 
       {/* 4th viewport  */}
-      <Box id="viewport" >
+      <motion.div id="viewport" >
 
-      </Box>
+      </motion.div>
 
       {/* 5th viewport  */}
-      <Box id="viewport" sx={{ display: "grid", placeItems: "center" }} >
+      <motion.div id="viewport" style={{ display: "grid", placeItems: "center" }} >
         <Box>
           <Box>
             Don't<img src="" alt="" /> you follow<img src="" alt="" /> us?
@@ -99,17 +99,17 @@ const Home = () => {
             Follow our instagram 
           </Box>
         </Box>
-      </Box>
+      </motion.div>
 
       {/* 6th viewport  */}
-      <Box id="viewport" sx={{ display: "grid", placeItems: "center" }}>
+      <motion.div id="viewport" style={{ display: "grid", placeItems: "center" }}>
         <Box sx={{ display: "flex" }} >
 
         </Box>
         <Box>
           @2021 Razak Pharmacy. All rights reserved.
         </Box>
-      </Box>
+      </motion.div>
       
     </div>
   )

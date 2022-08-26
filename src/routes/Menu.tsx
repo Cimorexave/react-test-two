@@ -1,9 +1,9 @@
-import { Box, Button, Collapse, Fab } from '@mui/material';
+import { Box, Button, Collapse, Fab, IconButton } from '@mui/material';
 import React, {useState} from 'react';
-import MenuButton from '../components/MenuButton';
 import "../styles/menu.css";
 import menuIconSvg from "../assets/menu-icon.svg";
 import {motion} from "framer-motion";
+import { useNavigate } from 'react-router-dom';
 
 
 const Menu = () => {
@@ -11,6 +11,8 @@ const Menu = () => {
   const [secondSubmenu, setSecondSubmenu] = useState<boolean>(false)
   const [thirdSubmenu, setThirdSubmenu] = useState<boolean>(false)
   const [fourthSubmenu, setFourthSubmenu] = useState<boolean>(false)
+
+  let navigate = useNavigate()
 
   return (
     <motion.div id="viewport-menu" 
@@ -24,7 +26,7 @@ const Menu = () => {
         justifyContent: "space-between", backgroundColor: "transparent" }}>
           <img id="logo" src={require("../assets/white-logo.png")} alt="logo" style={{ marginLeft: "4em" }} />
           {/* menu button  */}
-          <img src={menuIconSvg} alt="menu-icon" id='menu-icon-svg' />
+          <IconButton id="icon-btn" size="small" onClick={() => {navigate("/newhome")}} ><img src={menuIconSvg} alt="menu-icon" id='menu-icon-svg' /></IconButton>
         </Box>
           {/* Main menu */}
         <Box id="main">

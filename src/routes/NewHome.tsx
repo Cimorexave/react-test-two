@@ -31,7 +31,6 @@ const NewHome = () => {
               <h3>with more than half a century of<br /> experience</h3>
               <IconButton aria-label="more" sx={{ color: "white", border: "2px solid white", position: "absolute", right: 100, bottom: -10 }} ><KeyboardArrowRightIcon fontSize='large' /></IconButton>
             </motion.div>
-            <img src="" alt="" />
           </Box>
           {/* Footer */}
           <Box sx={{ padding: "0 8em", display: "flex", marginTop: "5%", gap: 1 }} >

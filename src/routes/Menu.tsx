@@ -32,25 +32,33 @@ const Menu = () => {
         <Box id="main">
           {/* menu  */}
           <Box id="menu">
-            <Button onClick={() => { setFirstSubmenu(firstSubmenu => !firstSubmenu) }} >About Us</Button>
+            <motion.div initial={{ opacity: 0, top: 100 }} animate={{ top: 0, opacity: 1}} transition= {{ delay: 0.5, duration: 0.5 }} >
+              <Button id="menu-button" size='large' onClick={() => { setFirstSubmenu(firstSubmenu => !firstSubmenu) }} >About Us</Button>
+            </motion.div>
             <Collapse in={firstSubmenu} >
               <Box>Submenu 1</Box>
               <Box>Submenu 2</Box>
               <Box>Submenu 3</Box>
             </Collapse>
-            <Button onClick={() => { setSecondSubmenu(secondSubmenu => !secondSubmenu) }} >Product</Button>
+            <motion.div initial={{ opacity: 0, top: 10 }} animate={{ top: 0, opacity: 1}} transition= {{ delay: 1, duration: 0.5 }}>
+              <Button id="menu-button" onClick={() => { setSecondSubmenu(secondSubmenu => !secondSubmenu) }} >Product</Button>
+            </motion.div>
             <Collapse in={secondSubmenu} >
               <Box>Submenu 1</Box>
               <Box>Submenu 2</Box>
               <Box>Submenu 3</Box>
             </Collapse>
-            <Button onClick={() => { setThirdSubmenu(thirdSubmenu => !thirdSubmenu) }} >News and Events</Button>
+            <motion.div initial={{ opacity: 0, top: 100 }} animate={{ top: 0, opacity: 1}} transition= {{ delay: 1.5, duration: 0.5 }}>
+              <Button id="menu-button" onClick={() => { setThirdSubmenu(thirdSubmenu => !thirdSubmenu) }} >News and Events</Button>
+            </motion.div>
             <Collapse in={thirdSubmenu} >
               <Box>Submenu 1</Box>
               <Box>Submenu 2</Box>
               <Box>Submenu 3</Box>
             </Collapse>
-            <Button onClick={() => { setFourthSubmenu(fourthSubmenu => !fourthSubmenu) }} >Contact Us</Button>
+            <motion.div initial={{ opacity: 0, top: 100 }} animate={{ top: 0, opacity: 1}} transition= {{ delay: 2, duration: 0.5 }}>
+              <Button id="menu-button" onClick={() => { setFourthSubmenu(fourthSubmenu => !fourthSubmenu) }} >Contact Us</Button>
+            </motion.div>
             <Collapse in={fourthSubmenu} >
               <Box>Submenu 1</Box>
               <Box>Submenu 2</Box>
@@ -63,7 +71,7 @@ const Menu = () => {
           </Box>
         </Box>
           {/* Footer */}
-          <Box>
+          <Box sx={{ marginTop: "2em", marginLeft: "2em" }}>
             Sharing is Caring
           </Box>
 

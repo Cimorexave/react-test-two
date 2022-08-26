@@ -26,3 +26,8 @@
 #menu {
     padding-left: 4em;
 }
+#menu-button {
+    width: 36rem;
+    height: 5rem;
+    padding: 0;
+}

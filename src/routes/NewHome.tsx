@@ -102,8 +102,19 @@ const NewHome = () => {
         {/* 4th viewport  */}
         <motion.div className="viewport" initial={{ zoom: 1 }} exit={{ zoom: 1 }}
         whileInView={{ zoom: 1.1 }} transition={{ delay: 1, duration: 1 }}>
-            <motion.div id="overlay" >
-            </motion.div>
+            <Box sx={{ padding: "0 8em", display: "flex", marginTop: "10%" }}>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+                transition={{ duration: 2, delay: 2 }} style={{ width: "36rem", position: "relative", fontSize: "larger" }} >
+                <Typography variant="body1" >Case Studies</Typography>
+                <Typography variant='h3' fontWeight="bold" >Razak's Case Studies</Typography>
+                <Typography variant="body1" sx={{ marginTop: 6 }} >Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>
+                Donec rutrum congue leo eget malesuada. <br/>
+                Proin eget tortor risus. Pellentesque in ipsum<br/>
+                id orci porta dapibus. Vivamus magna justo, lacinia<br/>
+                eget consectetur sed, convallis at tellus.</Typography>
+                <motion.div whileHover={{  opacity: 0.6 }} ><IconButton aria-label="more" sx={{ color: "white", border: "2px solid white", position: "absolute", right: 100, bottom: -50 }} ><KeyboardArrowRightIcon fontSize='large' /></IconButton></motion.div>
+                </motion.div>
+          </Box>
         </motion.div>
         {/* 5th viewport  */}
         <motion.div className="viewport">

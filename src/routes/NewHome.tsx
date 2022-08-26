@@ -48,8 +48,8 @@ const NewHome = () => {
               With more than half a century of epxerience and best quality
             </motion.div>
             {/* footer */}
-            <Box sx={{ color: "darkblue" }}>
-              Click and Learn more <IconButton aria-label="more" sx={{ color: "black", border: "2px solid white", position: "absolute", right: 100, bottom: -10 }} ><KeyboardArrowRightIcon fontSize='large' /></IconButton>
+            <Box sx={{ color: "darkblue", position: "relative" }}>
+              Click and Learn more <IconButton aria-label="more" sx={{ color: "black", border: "2px solid black", position: "absolute", right: 0, bottom: -10 }} ><KeyboardArrowRightIcon fontSize='small' /></IconButton>
             </Box>
           </Box>
           <Box id="text-box">
@@ -72,11 +72,13 @@ const NewHome = () => {
             <div className="blue"></div>
             <Box sx={{ display: "flex", flexDirection: "column",
             gap: 5, alignItems: "left", marginLeft: "8em", marginTop: "8em" }} >
-            <div id="hr" />
-            <Box>
+            <motion.div initial={{ width: 0 }} whileInView={{ width: 900 }} 
+             id="hr" transition={{ duration: 0.5, delay: 0.5 }} style={{ width: 0 }} />
+            <motion.div initial={{ opacity: 0, y: 10 }} transition={{ duration: 0.5, delay: 1 }}
+            whileInView={{ opacity: 1, y: 0 }}>
                 <Box>Blogs</Box>
                 <Box>News and Events</Box>
-            </Box>
+            </motion.div>
             {/* slider */}
 
             </Box>

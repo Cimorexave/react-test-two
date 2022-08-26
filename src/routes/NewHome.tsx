@@ -103,8 +103,8 @@ const NewHome = () => {
         <motion.div className="viewport" initial={{ zoom: 1 }} exit={{ zoom: 1 }}
         whileInView={{ zoom: 1.1 }} transition={{ delay: 1, duration: 1 }}>
             <Box sx={{ padding: "0 8em", display: "flex", marginTop: "10%" }}>
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-                transition={{ duration: 2, delay: 2 }} style={{ width: "36rem", position: "relative", fontSize: "larger" }} >
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
+                transition={{ duration: 2, delay: 1 }} style={{ width: "36rem", position: "relative", fontSize: "larger" }} >
                 <Typography variant="body1" >Case Studies</Typography>
                 <Typography variant='h3' fontWeight="bold" >Razak's Case Studies</Typography>
                 <Typography variant="body1" sx={{ marginTop: 6 }} >Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/>

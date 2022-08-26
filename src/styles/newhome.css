@@ -45,12 +45,26 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover ;
+    z-index: 5;
+    position: relative;
 }
+/* .viewport:nth-child(4)::after {
+    content: '';
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: blue;
+    z-index: 1;
+} */
 .viewport:nth-child(5) {
     color: var(--primaryblue-clr);
 }
 .viewport:nth-child(6) {
     background-color: var(--primaryblue-clr) ;
+}
+#drugs-pics {
+    height: 100px;
 }
 #logo {
     width: 7em;

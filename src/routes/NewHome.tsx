@@ -84,15 +84,25 @@ const NewHome = () => {
             </Box>
         </motion.div>
         {/* 4th viewport  */}
-        <motion.div className="viewport"></motion.div>
+        <motion.div className="viewport" initial={{ zoom: 1 }} exit={{ zoom: 1 }}
+        whileInView={{ zoom: 1.1 }} transition={{ delay: 1, duration: 1 }}>
+            <motion.div id="overlay" >
+            </motion.div>
+        </motion.div>
         {/* 5th viewport  */}
         <motion.div className="viewport">
             <Box sx={{ display: "grid", placeItems: "center", height: "100%" }}>
-                <Box>
-                    Don't<img src="" alt="" /> you<br/> follow<img src="" alt="" /> us?
+                <Box sx={{ fontSize: "xx-large" }}>
+                    Don't<motion.img src={require("../assets/img 7.png")} alt="drugs"
+                    initial={{ width: 0, height: 100 }} whileInView={{ width: 100 }} style={{ height: "auto" }}
+                    transition={{ delay: 1, duration: 1 }} id="drugs-pics" /> you
+                    <br/> follow<motion.img src={require("../assets/img 6.png")} alt="drugs" 
+                    initial={{ width: 0, height: 100 }} whileInView={{ width: 100 }}
+                    style={{ height: "auto" }} id="drugs-pics"
+                    transition={{ delay: 1, duration: 1 }} /> us?
                 </Box>
-                <Box sx={{ position: "absolute" }}>
-                    Follow our instagram 
+                <Box sx={{ position: "absolute", bottom: 50 }}>
+                    Follow our instagram <IconButton aria-label="more" size='small' sx={{ color: "black", border: "2px solid black", position: "absolute", right: -50, bottom: -7.5 }} ><KeyboardArrowRightIcon fontSize='small' /></IconButton>
                 </Box>
             </Box>
         </motion.div>

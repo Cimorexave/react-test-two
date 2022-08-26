@@ -1,5 +1,5 @@
 import { Box, Button, Collapse, Fab, IconButton, Typography } from '@mui/material';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "../styles/menu.css";
 import menuIconSvg from "../assets/menu-icon.svg";
 import {motion} from "framer-motion";
@@ -17,7 +17,17 @@ const Menu = () => {
   const [thirdSubmenu, setThirdSubmenu] = useState<boolean>(false)
   const [fourthSubmenu, setFourthSubmenu] = useState<boolean>(false)
 
+  const imgSources: Array<string> = [require("../assets/img 9.png"), require("../assets/img 8.png"), require("../assets/img 2.png"), require("../assets/img 1.png")]
+  const [imgSource, setImgSource] = useState<string>(require("../assets/img 9.png"))
+
   let navigate = useNavigate()
+
+  useEffect(() => {
+    setImgSource(prevImgSource => {
+      return imgSources.filter( img => img !== prevImgSource )[0]
+    })
+    console.log(imgSource);
+  }, [firstSubmenu, secondSubmenu, thirdSubmenu, fourthSubmenu])
 
   return (
     <motion.div id="viewport-menu" 
@@ -63,9 +73,7 @@ const Menu = () => {
             </Collapse>
           </Box>
           {/* image  */}
-          <Box>
-
-          </Box>
+          <motion.img src={imgSource} alt="drugs-picture" style={{ width: "20em", marginRight: "5em", height: "25em" }} />
         </Box>
           {/* Footer */}
           <Typography variant="subtitle2" sx={{ marginTop: "2em", marginLeft: "5em", color: "white" }}>

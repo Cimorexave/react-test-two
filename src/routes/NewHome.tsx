@@ -47,29 +47,29 @@ const NewHome = () => {
         </motion.div>
         {/* 2nd viewport  */}
         <motion.div className="viewport">
-        <Box sx={{ display: "flex", gap: "5em" }} >
-          <Box id="text-box">
-            <Box>About Razak</Box>
+        <Box sx={{ display: "flex", gap: "20em" }} >
+          <Box >
+            <Typography variant='overline' >About Razak</Typography>
             <motion.div initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}>
-              With more than half a century of epxerience and best quality
+              <Typography variant="h3" fontWeight="bold" fontSize="32px" >Razak Pharmacy<br /> With more than half a <br /> century of epxerience &<br /> best quality</Typography>
             </motion.div>
             {/* footer */}
-            <Box sx={{ color: "darkblue", position: "relative" }}>
-              Click and Learn more <IconButton aria-label="more" sx={{ color: "black", border: "2px solid black", position: "absolute", right: 0, bottom: -10 }} ><KeyboardArrowRightIcon fontSize='small' /></IconButton>
+            <Box sx={{ color: "darkblue", position: "relative", marginTop: 10 }}>
+              <Typography variant="subtitle2">Click and Learn more</Typography> <IconButton aria-label="more" sx={{ color: "black", border: "2px solid black", position: "absolute", left: 180, bottom: -10 }} ><KeyboardArrowRightIcon fontSize='small' /></IconButton>
             </Box>
           </Box>
-          <Box id="text-box">
+          <Box sx={{ marginTop: 3 }}>
             <motion.div initial={{ opacity: 0, y: 10 }} transition={{ duration: 0.5, delay: 0.5 }}
             whileInView={{ opacity: 1, y: 0 }}>
-              Razak laboratories Pharmaceutical joint stock company started it's actvity
-              in 1343 Hijri (1964 AD) under the name of Pfizer Laboratories 
-              joint stock company under the ownership of Pfizer America. 
+              <Typography sx={{ lineHeight: 2 }} variant="body1" >Razak laboratories Pharmaceutical joint<br /> stock company started it's actvity
+              in 1343 <br /> Hijri (1964 AD) under the name of Pfizer <br/> Laboratories 
+              joint stock company under<br/> the ownership of Pfizer America. </Typography>
             </motion.div>
             {/* footer */}
-            <Box>
-              <Button >Product</Button>
-              <Button >Contact</Button>
+            <Box sx={{ marginTop: 5 }}>
+              <Button variant="outlined" sx={{ borderRadius: 5, marginRight: 1 }} >Product</Button>
+              <Button variant="outlined" sx={{ borderRadius: 5 }} >Contact</Button>
             </Box>
           </Box>
         </Box>
